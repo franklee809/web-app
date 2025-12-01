@@ -2,16 +2,19 @@
   "files": [],
   "references": [
     {
-      "path": "./tsconfig.node.json"
+      "path": "./apps/default"
     },
     {
-      "path": "./tsconfig.app.json"
+      "path": "./apps/theme-2"
     },
     {
-      "path": "./tsconfig.vitest.json"
+      "path": "./packages/shared-components"
+    },
+    {
+      "path": "./packages/shared-utils"
+    },
+    {
+      "path": "./packages/shared-types"
     }
-  ],
-  "compilerOptions": {
-    "module": "NodeNext"
-  }
+  ]
 }

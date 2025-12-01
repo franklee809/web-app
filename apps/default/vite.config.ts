@@ -10,6 +10,10 @@ export default defineConfig({
     vue(),
     vueJsx(),
   ],
+  server: {
+    port: 3000, // Set your desired port here
+    strictPort: true // Optional: Exit if the specified port is in use
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

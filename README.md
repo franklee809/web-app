@@ -1,61 +1,36 @@
-# -
+# Web App Monorepo
 
-This template should help get you started developing with Vue 3 in Vite.
+This project has been restructured into a **pnpm workspace-based monorepo** containing multiple themed web applications and shared packages.
 
-## Recommended IDE Setup
+## 📚 Documentation
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Please refer to [MONOREPO_GUIDE.md](MONOREPO_GUIDE.md) for detailed instructions on:
+- Project structure
+- Development workflow
+- Adding new apps
+- Working with shared packages
+- Build and deployment
 
-## Type Support for `.vue` Imports in TS
+## 🚀 Quick Start
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+```bash
+# Install dependencies
+pnpm install
 
-## Customize configuration
+# Run all apps in development mode
+pnpm dev
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+# Build all apps
+pnpm build
 ```
 
-### Compile and Hot-Reload for Development
+## 📦 Apps
 
-```sh
-npm run dev
-```
+- **@monorepo/default**: The original application (Port 3000)
+- **@monorepo/theme-2**: A new themed application variant (Port 3001)
 
-### Type-Check, Compile and Minify for Production
+## 🛠️ Shared Packages
 
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- **@monorepo/shared-components**: Reusable Vue components
+- **@monorepo/shared-utils**: Common utility functions
+- **@monorepo/shared-types**: Shared TypeScript types

@@ -1,0 +1,110 @@
+// Import Tailwind CSS directives
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Import SCSS variables and mixins
+@import './styles/variables';
+@import './styles/mixins';
+
+// Global Base Styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  color: $gray-900;
+  background-color: $white;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+// Custom Tailwind Layer - Components
+@layer components {
+  .btn {
+    @include button-base;
+    
+    &-primary {
+      @apply bg-blue-600 text-white hover:bg-blue-700;
+    }
+    
+    &-secondary {
+      @apply bg-gray-600 text-white hover:bg-gray-700;
+    }
+    
+    &-success {
+      @apply bg-green-600 text-white hover:bg-green-700;
+    }
+    
+    &-danger {
+      @apply bg-red-600 text-white hover:bg-red-700;
+    }
+    
+    &-outline {
+      @apply border-2 border-gray-300 bg-transparent hover:bg-gray-50;
+    }
+  }
+  
+  .card {
+    @include card;
+    @include hover-lift;
+  }
+  
+  .container-custom {
+    @apply mx-auto px-4;
+    max-width: 1280px;
+    
+    @include respond-to('sm') {
+      @apply px-6;
+    }
+    
+    @include respond-to('lg') {
+      @apply px-8;
+    }
+  }
+}
+
+// Custom Tailwind Layer - Utilities
+@layer utilities {
+  .flex-center {
+    @include flex-center;
+  }
+  
+  .flex-between {
+    @include flex-between;
+  }
+  
+  .text-gradient {
+    @include gradient-bg($primary-color, $accent-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  body {
+    color: $gray-100;
+    background-color: $gray-900;
+  }
+}
