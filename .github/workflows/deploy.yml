@@ -13,21 +13,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
+          cache: 'pnpm'
+      
       - name: Install dependencies
-        run: npm ci
-      - name: Build static files
-        run: npm run build --if-present
-      # - run: npm test
+        run: pnpm install --frozen-lockfile
+      
+      - name: Build default app
+        run: pnpm build:default
+      
+      # - run: pnpm test:default
       - name: Configure Pages
         uses: actions/configure-pages@v4
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './apps/default/dist'
 
   deploy:
     needs: build
