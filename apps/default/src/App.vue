@@ -12,7 +12,7 @@ import MagicWand from './components/icons/MagicWand.vue'
 
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/example">Example</RouterLink>
+        <RouterLink to="/blog">Blog</RouterLink>
       </nav>
     </div>
   </header>
@@ -21,9 +21,13 @@ import MagicWand from './components/icons/MagicWand.vue'
 </template>
 
 <style scoped lang="scss">
+@import '@/assets/styles/variables';
+
 header {
   line-height: 1.5;
   max-height: 100vh;
+  font-family: $font-family-base;
+  font-weight: $font-weight-semibold ;
 
   @media (min-width: 1024px) {
     display: flex;
@@ -59,6 +63,7 @@ nav {
     display: inline-block;
     padding: 0 1rem;
     border-left: 1px solid var(--color-border);
+    font-weight: $font-weight-medium;
 
     &.router-link-exact-active {
       color: var(--color-text);
