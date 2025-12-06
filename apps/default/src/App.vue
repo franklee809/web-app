@@ -4,7 +4,7 @@ import MagicWand from './components/icons/MagicWand.vue'
 </script>
 
 <template>
-  <header>
+  <!-- <header>
 
     <div class="wrapper">
       <MagicWand class="logo" />
@@ -15,7 +15,7 @@ import MagicWand from './components/icons/MagicWand.vue'
         <RouterLink to="/blog">Blog</RouterLink>
       </nav>
     </div>
-  </header>
+  </header> -->
 
   <RouterView />
 </template>

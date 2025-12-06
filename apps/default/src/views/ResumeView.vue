@@ -13,7 +13,16 @@
           <img src="https://placehold.co/400x400/2a665b/white?text=RT" alt="Rick Tang" class="w-full h-full object-cover">
         </div>
         <h1 class="text-3xl font-bold mb-1">Lee Weiquan</h1>
-        <p class="text-gray-300 text-lg">Backend Web Developer</p>
+        <p class="text-gray-300 text-lg mb-4">Backend Web Developer</p>
+        
+        <!-- Horizontal Links -->
+        <div class="flex flex-wrap justify-center gap-2 text-sm text-gray-300">
+          <a href="https://www.linkedin.com/in/lee-weiquan-13b500164/" target="_blank" class="hover:text-white transition-colors">LinkedIn</a>
+          <span>|</span>
+          <a href="https://my.jobstreet.com/profiles/weiquan-lee-bm6snD0f2R" target="_blank" class="hover:text-white transition-colors">JobStreet</a>
+          <span>|</span>
+          <a href="https://github.com/franklee809" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+        </div>
       </div>
 
       <!-- Details -->
@@ -32,16 +41,6 @@
             <h3 class="font-bold text-gray-200">Email</h3>
             <a href="mailto:franklee809@gmail.com" class="text-gray-300 hover:text-white">franklee809@gmail.com</a>
           </div>
-        </div>
-      </div>
-
-      <!-- Links -->
-      <div class="mb-10">
-        <h2 class="text-xl font-bold mb-4 border-b border-[#2a665b] pb-2">Links</h2>
-        <div class="flex flex-col space-y-2 text-sm">
-          <a href="https://www.linkedin.com/in/lee-weiquan-13b500164/" target="_blank" class="text-gray-300 hover:text-white underline decoration-[#2a665b] underline-offset-4">LinkedIn</a>
-          <!-- <a href="#" class="text-gray-300 hover:text-white underline decoration-[#2a665b] underline-offset-4">Dribbble</a> -->
-          <!-- <a href="#" class="text-gray-300 hover:text-white underline decoration-[#2a665b] underline-offset-4">Behance</a> -->
         </div>
       </div>
 
