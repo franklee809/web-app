@@ -5,12 +5,12 @@
 <template>
   <div class="min-h-screen bg-white font-sans flex flex-col lg:flex-row">
     <!-- Sidebar -->
-    <aside class="w-full lg:w-1/3 bg-[#154c43] text-white p-8 lg:min-h-screen flex flex-col">
+    <aside class="w-full lg:w-1/3 bg-[#154c43] text-white p-6 lg:min-h-screen lg:p-8 flex flex-col">
       <!-- Profile Header -->
       <div class="flex flex-col items-center mb-12 text-center">
         <div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-[#2a665b]">
           <!-- Using a placeholder image since we don't have the specific asset, user can replace -->
-          <img src="https://placehold.co/400x400/2a665b/white?text=RT" alt="Rick Tang" class="w-full h-full object-cover">
+          <img src="https://placehold.co/400x400/2a665b/white?text=WQ" alt="Lee Weiquan" class="w-full h-full object-cover">
         </div>
         <h1 class="text-3xl font-bold mb-1">Lee Weiquan</h1>
         <p class="text-gray-300 text-lg mb-4">Backend Web Developer</p>
@@ -35,7 +35,7 @@
           </div>
           <div>
             <h3 class="font-bold text-gray-200">Phone</h3>
-            <p class="text-gray-300">014-3076093</p>
+            <a href="tel:0143076093" class="text-gray-300 hover:text-white">014-3076093</a>
           </div>
           <div>
             <h3 class="font-bold text-gray-200">Email</h3>
@@ -99,7 +99,7 @@
     </aside>
 
     <!-- Main Content -->
-    <main class="w-full lg:w-2/3 p-8 lg:p-16 text-gray-800">
+    <main class="w-full lg:w-2/3 p-6 lg:p-16 text-gray-800">
       
       <!-- Profile -->
       <section class="mb-12">
