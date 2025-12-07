@@ -5,9 +5,13 @@
 <template>
   <div class="min-h-screen bg-white font-sans flex flex-col lg:flex-row">
     <!-- Sidebar -->
-    <aside class="w-full lg:w-1/3 bg-[#154c43] text-white p-6 lg:min-h-screen lg:p-8 flex flex-col">
-      <!-- Profile Header -->
-      <div class="flex flex-col items-center mb-12 text-center">
+    <!-- Sidebar -->
+    <!-- Used display: contents on mobile to allow children to interleave with main content -->
+    <aside class="contents lg:block lg:w-1/3 lg:bg-[#154c43] lg:text-white lg:min-h-screen lg:p-8 flex flex-col">
+      
+      <!-- Mobile Group 1: Header (Priority 1) -->
+      <div class="order-1 bg-[#154c43] text-white p-6 lg:p-0 lg:bg-transparent flex flex-col items-center mb-6 lg:mb-12 text-center w-full">
+        <!-- Profile Header -->
         <div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-[#2a665b]">
           <!-- Using a placeholder image since we don't have the specific asset, user can replace -->
           <img src="https://webapp1.blob.core.windows.net/images/my-photo.jpeg?sp=r&st=2025-12-07T05:02:48Z&se=2100-12-07T13:17:48Z&spr=https&sv=2024-11-04&sr=b&sig=RQ2OZ%2FYahc84%2FNziiBjAuHWMrTJo5wElB3di6sQHoMo%3D" alt="Lee Weiquan" class="w-full h-full object-cover">
@@ -25,81 +29,84 @@
         </div>
       </div>
 
-      <!-- Details -->
-      <div class="mb-10">
-        <h2 class="text-xl font-bold mb-4 border-b border-[#2a665b] pb-2">Details</h2>
-        <div class="space-y-4 text-sm">
-          <div>
-            <h3 class="font-bold text-gray-200">Address</h3>
-            <p class="text-gray-300">Butterworth, Malaysia</p>
-          </div>
-          <div>
-            <h3 class="font-bold text-gray-200">Phone</h3>
-            <a href="tel:0143076093" class="text-gray-300 hover:text-white">014-3076093</a>
-          </div>
-          <div>
-            <h3 class="font-bold text-gray-200">Email</h3>
-            <a href="mailto:franklee809@gmail.com" class="text-gray-300 hover:text-white">franklee809@gmail.com</a>
+      <!-- Mobile Group 3: sidebar details (Priority 3 - Bottom) -->
+      <div class="order-3 bg-[#154c43] text-white p-6 lg:p-0 lg:bg-transparent w-full">
+        <!-- Details -->
+        <div class="mb-10">
+          <h2 class="text-xl font-bold mb-4 border-b border-[#2a665b] pb-2">Details</h2>
+          <div class="space-y-4 text-sm">
+            <div>
+              <h3 class="font-bold text-gray-200">Address</h3>
+              <p class="text-gray-300">Butterworth, Malaysia</p>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-200">Phone</h3>
+              <a href="tel:0143076093" class="text-gray-300 hover:text-white">014-3076093</a>
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-200">Email</h3>
+              <a href="mailto:franklee809@gmail.com" class="text-gray-300 hover:text-white">franklee809@gmail.com</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Skills -->
-      <div class="mb-8">
-        <h2 class="text-xl font-bold mb-6 border-b border-[#2a665b] pb-2">Skills</h2>
-        <div class="space-y-4">
-          <!-- Skill Items -->
-          <div>
-            <div class="flex justify-between mb-1">
-              <span class="text-sm">Laravel</span>
+        <!-- Skills -->
+        <div class="mb-8">
+          <h2 class="text-xl font-bold mb-6 border-b border-[#2a665b] pb-2">Skills</h2>
+          <div class="space-y-4">
+            <!-- Skill Items -->
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm">Laravel</span>
+              </div>
+              <div class="w-full bg-[#0e332d] h-1.5 rounded-full overflow-hidden">
+                <div class="bg-white h-1.5 rounded-full" style="width: 95%"></div>
+              </div>
             </div>
-            <div class="w-full bg-[#0e332d] h-1.5 rounded-full overflow-hidden">
-              <div class="bg-white h-1.5 rounded-full" style="width: 95%"></div>
+            
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm">Node.js</span>
+              </div>
+              <div class="w-full bg-[#0e332d] h-1.5 rounded-full overflow-hidden">
+                <div class="bg-white h-1.5 rounded-full" style="width: 90%"></div>
+              </div>
             </div>
-          </div>
-          
-          <div>
-            <div class="flex justify-between mb-1">
-              <span class="text-sm">Node.js</span>
-            </div>
-            <div class="w-full bg-[#0e332d] h-1.5 rounded-full overflow-hidden">
-              <div class="bg-white h-1.5 rounded-full" style="width: 90%"></div>
-            </div>
-          </div>
 
-          <div>
-            <div class="flex justify-between mb-1">
-              <span class="text-sm">Vue.js</span>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm">Vue.js</span>
+              </div>
+              <div class="w-full bg-[#0e332d] h-1.5 rounded-full overflow-hidden">
+                <div class="bg-white h-1.5 rounded-full" style="width: 90%"></div>
+              </div>
             </div>
-            <div class="w-full bg-[#0e332d] h-1.5 rounded-full overflow-hidden">
-              <div class="bg-white h-1.5 rounded-full" style="width: 90%"></div>
-            </div>
-          </div>
 
-          <div>
-            <div class="flex justify-between mb-1">
-              <span class="text-sm">Kubernetes & Docker</span>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm">Kubernetes & Docker</span>
+              </div>
+              <div class="w-full bg-[#0e332d] h-1.5 rounded-full overflow-hidden">
+                <div class="bg-white h-1.5 rounded-full" style="width: 85%"></div>
+              </div>
             </div>
-            <div class="w-full bg-[#0e332d] h-1.5 rounded-full overflow-hidden">
-              <div class="bg-white h-1.5 rounded-full" style="width: 85%"></div>
-            </div>
-          </div>
 
-          <div>
-            <div class="flex justify-between mb-1">
-              <span class="text-sm">Cloud (Alibaba/Huawei)</span>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm">Cloud (Alibaba/Huawei)</span>
+              </div>
+              <div class="w-full bg-[#0e332d] h-1.5 rounded-full overflow-hidden">
+                <div class="bg-white h-1.5 rounded-full" style="width: 80%"></div>
+              </div>
             </div>
-            <div class="w-full bg-[#0e332d] h-1.5 rounded-full overflow-hidden">
-              <div class="bg-white h-1.5 rounded-full" style="width: 80%"></div>
-            </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </aside>
 
-    <!-- Main Content -->
-    <main class="w-full lg:w-2/3 p-6 lg:p-16 text-gray-800">
+    <!-- Main Content (Priority 2) -->
+    <main class="order-2 w-full lg:w-2/3 p-6 lg:p-16 text-gray-800 lg:order-none">
       
       <!-- Profile -->
       <section class="mb-12">
