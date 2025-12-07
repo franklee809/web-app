@@ -10,7 +10,7 @@
       <div class="flex flex-col items-center mb-12 text-center">
         <div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-[#2a665b]">
           <!-- Using a placeholder image since we don't have the specific asset, user can replace -->
-          <img src="https://placehold.co/400x400/2a665b/white?text=WQ" alt="Lee Weiquan" class="w-full h-full object-cover">
+          <img src="https://webapp1.blob.core.windows.net/images/my-photo.jpeg?sp=r&st=2025-12-07T05:02:48Z&se=2100-12-07T13:17:48Z&spr=https&sv=2024-11-04&sr=b&sig=RQ2OZ%2FYahc84%2FNziiBjAuHWMrTJo5wElB3di6sQHoMo%3D" alt="Lee Weiquan" class="w-full h-full object-cover">
         </div>
         <h1 class="text-3xl font-bold mb-1">Lee Weiquan</h1>
         <p class="text-gray-300 text-lg mb-4">Backend Web Developer</p>
